@@ -1,0 +1,40 @@
+* {
+    background-color: rgb(27, 23, 23);
+    color:white;
+}
+#main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+  color:aqua;
+  margin-left:15px;
+}
+.input{
+  border:solid;
+  padding:10px;
+  width:300px;
+  border-color:rgb(43, 125, 226);
+}
+.btn,
+.reset{
+  border:solid;
+  background-color:aqua;
+  color:black;
+  font-weight: bold;
+  padding:5px;
+  border-radius:12px;
+  width:100px;
+  display:block;
+  margin:20px;
+  margin-bottom:4px;
+}
+.attempts{
+  font-size: large;
+}
+.result{
+  font-size:large;
+  font-weight:bold;
+}
