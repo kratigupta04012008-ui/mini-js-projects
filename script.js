@@ -18,20 +18,24 @@ function init(){
   ipt.disabled=false;
   button.disabled=false;
   resetbtn.style.display='none';
+  result.textContent='';
   ipt.focus();
 }
 
 function checkGuess(){
 
+  if(ipt.value === isNaN || ipt.value<1 || ipt.value>100){
+    result.textContent = "⚠️ Please enter a number between 1 and 100!";
+    return;
+  }
+
   count++;
 
   if(ipt.value>x){
     result.textContent="Too High! Try a lower number.";
-    count++;
     attempt.textContent=`Guesses taken: ${count}`;
   }else if(ipt.value<x){
     result.textContent="Too Low! Try a higher number.";
-    count++;
     attempt.textContent=`Guesses taken: ${count}`;
   }else if(ipt.value==x){
     result.textContent=`Congratulations! You guessed it in ${count} attempts!`;
